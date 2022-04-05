@@ -25,7 +25,7 @@
                     'casa' => 'Torino',
                     'trasferta' => 'Roma',
                     'goal_casa' => '3',
-                    'goal_trasferta' => '4'
+                    'goal_trasferta' => '4',
                 ],
 
                 $seconda_sett = [
@@ -33,7 +33,7 @@
                     'casa' => 'Salernitana',
                     'trasferta' => 'Milan',
                     'goal_casa' => '1',
-                    'goal_trasferta' => '3'
+                    'goal_trasferta' => '3',
                 ],
 
                 $terza_sett = [
@@ -41,24 +41,26 @@
                     'casa' => 'Fiorentina',
                     'trasferta' => 'La Spezia',
                     'goal_casa' => '0',
-                    'goal_trasferta' => '0'
+                    'goal_trasferta' => '0',
                 ],
 
-            ]?>
-            
+            ]; ?>
+
             <?php
 
-            for ($i = 0; $i < 4; $i++) {
+            for ($i = 0; $i < count($calendario_gennaio); $i++) {
+
+                
 
                 ?>
 
                 <h2><?php $calendario_gennaio[$i][1]?></h2>
-
+                
                 <h4>Avversari: 
                     <span>
-                        <?php $calendario_gennaio[$i]['casa']?> vs <?php $calendario_gennaio[$i]['trasferta']
+                        <?php echo $calendario_gennaio[$i]['casa']?> vs <?php echo $calendario_gennaio[$i]['trasferta']
                         ?> Risultato: 
-                        <?php $calendario_gennaio[$i]['goal_casa']?> : <?php $calendario_gennaio[$i]['goal_trasferta'] ?>
+                        <?php echo $calendario_gennaio[$i]['goal_casa']?> : <?php echo $calendario_gennaio[$i]['goal_trasferta'] ?>
                     </span>
                 </h4>
 
